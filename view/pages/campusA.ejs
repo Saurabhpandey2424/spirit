@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,19 +7,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Ambessdor! Spirit-2023</title>
+    <title>Campus Ambassdor! Spirit-2023</title>
+   <style>
+     /*
+      navbar styling
+     */
+     body {
+        background-color: #003459;
+     }
+     .navbar,.container-fluid , #navbarContent ul {
+        display:flex;
+        background-color: #003459;
+     }
+     .navbar{
+        position:sticky;
+        width:100%;
+        justify-content: space-between;
+     }
+     
+     .navbar-brand img{
+        margin:0px;
+        padding: 0px;
+        padding-top:10px;
+        padding-left:1rem;
+        width:2rem;
+        height: auto;
+     }
+     .nav-item {
+        text-decoration: none;
+     }
+     #navbarContent ul li {
+        list-style-type: none;
+     }
+     #navbarContent ul,.hero_section{
+        justify-content: space-around;
+        align-items:center;
+     }
+     #navbarContent ul li {
+        padding:0px 1rem;
+     }
+     .btn_login {
+        border: 3px solid white;
+        text-decoration: none;
+        list-style-type: none;
+        padding:8px 20px;
+        background-color: transparent;
+        border-radius: 20px;
+        font-weight: 600;
+        color:red;
+     }
+     .nav-item a:hover {
+        text-decoration:underline;
+     }
+     .nav-item a {
+        text-decoration: none;
+        font-weight: 500;
+        color:white;
+     }
+     .sticky {
+        position:fixed;
+        top:0;
+     }
+     /* navbar pr intnna hi hai  */
+     
+     
+     input,select {
+        padding: 5px;
+     }
+     .hero_section {
+        background-color: #003459;
+        position:relative;
+     }
+     #div2 {
+        position:absolute;
+        right:0;
+     }
+     
+    </style>
 </head>
 
 <body>
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ca-box">
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <!-- logo -->
+                <img src="image/logo_light.png" alt="logo">
+            </a>
+        </div>
+            <div id="navbarContent">
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact&nbsp;Us</a>
+                    </li>
+                
+                    <li>
+                        <a href="/login" target="_blank" class="btn_login" type="button">
+                                         Login</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            
+        </div>
+    <!-- navbar -->
+    <div class="hero_section">
+        
+        <div id="div2" class="modal-content ca-box">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ModalLabel">Become our Campus Ambessdor</h5>
+                    <h4 class="modal-title" id="ModalLabel">Become our Campus Ambassdor</h4>
                     <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+
                     <div class="ca-form">
                         <form action="/ca" method="post">
                             <div class="ca-comb">
@@ -43,12 +151,12 @@
                                 <div class="ca-form-elm">
                                     <label for="gender">Gender</label>
                                     <select name="gender" id="gender" required>
-                                        <option selected>Male</option>
-                                        <option value="1">First</option> -->
-                                        <!-- <option>Female</option>
-                                        <option>Other</option> -->
+                                        <option selected>--Select--</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option> 
 
-                                    <!-- </select>
+                                     </select>
                                 </div>
 
                             </div>
@@ -62,9 +170,9 @@
                                 <div class="ca-form-elm">
                                     <label for="year">Year</label>
                                     <select name="year" id="year">
-                                        <option selected>First</option> -->
-                                        <!-- <option value="1">First</option> -->
-                                        <!-- <option>Second</option>
+                                        <option selected>--Select--</option>
+                                        <option>First</option> 
+                                        <option>Second</option>
                                         <option>Third</option>
                                         <option>Fourth</option>
                                         <option>Fifth</option>
@@ -88,30 +196,30 @@
                                     <label for="code">Pincode</label>
                                     <input type="number" name="code" id="code" required>
                                 </div>
-                            </div> -->
-                            <!-- <div class="ca-form-elm">
+                            </div> 
+                             <div class="ca-form-elm">
                                 <label for="question">Why we should choose you?</label>
                                 <input type="text" name="question" id="question" required>
                             </div>
                             <div class="ca-btn">
-                                <button type="submit">Summit</button>
+                                <button type="submit">Submit</button>
                             </div>
                         </form>
                     </div>
-                </div>
-
-            </div> -->
-            <!-- <style>
+        </div>
+    </div>
+             <style>
                 .ca-box {
                     background-color: #1b263b;
+                    border-radius: 10px;
+                    width:70%;
                 }
 
                 .ca-form {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 100%;
-                    margin: 2px;
+                    
                 }
 
                 .ca-comb {
@@ -173,7 +281,22 @@
                 }
             </style>
         </div>
-    </div> -->
+    </div> 
+    <!-- js to make the navbar sticky (nahi hua pata nahi kyu)-->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        let navbar = document.getElementsByClassName("navbar");
+        let sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 
 </html>
